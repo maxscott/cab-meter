@@ -11,9 +11,7 @@
     Bundles.Reference("scripts/ember-emu.js");
     Bundles.Reference("scripts/app/application/application.js.coffee");
     Bundles.Reference("scripts/app/models");
-    //Bundles.Reference("scripts/app/routes");
-    //Bundles.Reference("scripts/app/views");
-    Bundles.Reference("scripts/app/helpers");
+    Bundles.Reference("scripts/app/routes");
 }
 <!DOCTYPE html>
 <html>    
@@ -26,11 +24,7 @@
 
     <body>
         @Handlebars.RenderTemplates("~/scripts/app/templates")
-        @RenderBody()   
-        <script type="text/javascript">
-            window.ENV = window.ENV || {};
-            window.ENV["EXPERIMENTAL_CONTROL_HELPER"] = true;
-        </script>  
+        @RenderBody()  
         @Bundles.RenderScripts()         
     </body>
 </html>

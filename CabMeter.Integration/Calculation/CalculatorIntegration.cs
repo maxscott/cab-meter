@@ -12,7 +12,7 @@ namespace CabMeter.Integration.Calculation
         static decimal fare;
         static Trip trip = new Trip
         {
-            StartTime = new DateTime(2010, 10, 8, 17, 30, 0),
+            StartDateTime = new DateTime(2010, 10, 8, 17, 30, 0),
             MilesUnder6Mph = 2,
             MinutesAbove6Mph = 5
         };

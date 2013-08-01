@@ -1,16 +1,51 @@
 <div class="navbar navbar-inverse navbar-fixed-top">
   <div class="navbar-inner">
     <div class="container">
-      	<a class="brand" href="#">Cab Meter</a>
+      	<h2><a href="#">Bosh</a></h2>
     </div>
   </div>
 </div>
-<ul class="nav nav-list bs-docs-sidenav">
-	<li><i class="icon-chevron-right"></i> DATA</li>
-	<li><i class="icon-chevron-right"></i> AND</li>
-	<li><i class="icon-chevron-right"></i> MORE</li>
-	<li><i class="icon-chevron-right"></i> DATA</li>
-</ul>
-<div class="container">
-  {{outlet}}
+<div class"row">
+	<h3 class="col-offset-1">
+		Enter Your Info
+	</h3>
+  <form class="form-horizontal" {{action "getFare" on="submit"}}>
+
+    <div class="row">
+      <label for="minutesAbove6Mph" class="col col-lg-2 control-label">Minutes > 6 MPH</label>
+      <div class="col col-lg-8">
+        {{input value=minutesAbove6Mph}}
+      </div>
+    </div>
+
+    <div class="row">
+      <label for="milesUnder6Mph" class="col col-lg-2 control-label">Miles < 6 MPH</label>
+      <div class="col col-lg-8">
+        {{input value=milesUnder6Mph}}
+      </div>
+    </div>
+
+    <div class="row">
+      <label for="startDate" class="col col-lg-2 control-label">Date started</label>
+      <div class="col col-lg-8" class="datepicker">
+        {{input value=startDate}}
+      </div>
+    </div>
+
+  	<div class="row">
+        <label for="startTime" class="col col-lg-2 control-label">Time started</label>
+        <div class="col col-lg-8" class="datepicker">
+          {{input value=startTime}}
+        </div>      
+        <div class="col col-lg-8">
+          <br />
+          <button {{action getFare}} class="btn btn-default">Get fare</button>
+        </div>
+    </div>
+  </form>
+  {{#if totalFare}}
+    <div class="row">
+  	  <h1 class="col-offset-1">GET OUT, YOU OWE ME: {{totalFare}}</h1>
+    </div>
+  {{/if}}
 </div>

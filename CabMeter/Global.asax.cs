@@ -2,6 +2,7 @@
 using System.Web.Mvc;
 using System.Web.Routing;
 using CabMeter.DependencyInjection;
+using Newtonsoft.Json.Serialization;
 
 namespace CabMeter
 {
@@ -19,6 +20,10 @@ namespace CabMeter
             RouteConfig.RegisterRoutes(RouteTable.Routes);
 
             StructureMapConfig.Config();
+
+            GlobalConfiguration.Configuration.Formatters.JsonFormatter.SerializerSettings.ContractResolver = 
+                new CamelCasePropertyNamesContractResolver();
+
         }
     }
 }
