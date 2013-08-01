@@ -5,6 +5,6 @@ namespace CabMeter.Calculation
 {
     public interface IFareCalculator
     {
-        decimal CalculateFare(Trip t);
+        decimal CalculateFare(Trip trip);
     }
 }
