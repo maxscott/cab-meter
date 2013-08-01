@@ -1,4 +1,5 @@
-﻿using CabMeter.Models;
+﻿using System;
+using CabMeter.Models;
 
 namespace CabMeter.Calculation
 {
