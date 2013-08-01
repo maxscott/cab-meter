@@ -57,6 +57,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Calculation\CalculatorSpecs.cs" />
+    <Compile Include="Calculation\Rules\InitialFeeRuleSpecs.cs" />
+    <Compile Include="Calculation\Rules\MilesUnderSixMphRuleSpecs.cs" />
+    <Compile Include="Calculation\Rules\MinutesOverSixMphRuleSpecs.cs" />
+    <Compile Include="Calculation\Rules\NightChargeRuleSpecs.cs" />
+    <Compile Include="Calculation\Rules\NyTaxRuleSpecs.cs" />
+    <Compile Include="Calculation\Rules\PeakChargeRuleSpecs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

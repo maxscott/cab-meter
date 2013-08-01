@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using CabMeter.Calculation.Rules;
 
 namespace CabMeter.Calculation
 {
@@ -12,7 +13,7 @@ namespace CabMeter.Calculation
                     new InitialFeeRule(), 
                     new PeakChargeRule(), 
                     new NightChargeRule(),
-                    new MinutesOverSixMph(), 
+                    new MinutesOverSixMphRule(), 
                     new MilesUnderSixMphRule()
                 };
         }

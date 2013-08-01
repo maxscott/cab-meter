@@ -12,6 +12,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{A29F10
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CabMeter.Integration", "CabMeter.Integration\CabMeter.Integration.csproj", "{6C1F82F6-883A-40AF-AB45-C980DAE01FAC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,6 +28,10 @@ Global
 		{8C03D3EC-C223-4CE4-8ACE-2D2859B1975A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8C03D3EC-C223-4CE4-8ACE-2D2859B1975A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8C03D3EC-C223-4CE4-8ACE-2D2859B1975A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C1F82F6-883A-40AF-AB45-C980DAE01FAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C1F82F6-883A-40AF-AB45-C980DAE01FAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C1F82F6-883A-40AF-AB45-C980DAE01FAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C1F82F6-883A-40AF-AB45-C980DAE01FAC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

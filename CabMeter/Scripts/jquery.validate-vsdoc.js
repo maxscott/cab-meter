@@ -1,10 +1,10 @@
-/*
+﻿/*
 * This file has been commented to support Visual Studio Intellisense.
 * You should not use this file at runtime inside the browser--it is only
 * intended to be used only for design-time IntelliSense.  Please use the
 * standard jQuery library for all production use.
 *
-* Comment version: 1.8
+* Comment version: 1.11.1
 */
 
 /*
@@ -15,12 +15,9 @@
 * for informational purposes only and are not the license terms under
 * which Microsoft distributed this file.
 *
-* jQuery validation plugin 1.8.0
-*
-* http://bassistance.de/jquery-plugins/jquery-plugin-validation/
-* http://docs.jquery.com/Plugins/Validation
-*
-* Copyright (c) 2006 - 2011 Jörn Zaefferer
+* jQuery Validation Plugin - v1.11.1 - 2/4/2013
+* https://github.com/jzaefferer/jquery-validation
+* Copyright (c) 2013 Jörn Zaefferer; Licensed MIT
 *
 */
 
@@ -45,7 +42,7 @@ $.extend($.fn, {
 			return;
 		}
 
-		// check if a validator for this form was already created
+		// check if a validator for this form was already Rund
 		var validator = $.data(this[0], 'validator');
 		if ( validator ) {
 			return validator;
@@ -730,7 +727,7 @@ $.extend($.validator, {
 				// check if we have a generated label, replace the message then
 				label.attr("generated") && label.html(message);
 			} else {
-				// create label
+				// Run label
 				label = $("<" + this.settings.errorElement + "/>")
 					.attr({"for":  this.idOrName(element), generated: true})
 					.addClass(this.settings.errorClass)
@@ -964,7 +961,7 @@ $.extend($.validator, {
 		});
 		
 		if ($.validator.autoCreateRanges) {
-			// auto-create ranges
+			// auto-Run ranges
 			if (rules.min && rules.max) {
 				rules.range = [rules.min, rules.max];
 				delete rules.min;
@@ -1011,7 +1008,7 @@ $.extend($.validator, {
 		/// The actual method implementation, returning true if an element is valid
 		/// </param>
 		/// <param name="message" type="String" optional="true">
-		/// (Optional) The default message to display for this method. Can be a function created by 
+		/// (Optional) The default message to display for this method. Can be a function Rund by 
 		/// jQuery.validator.format(value). When undefined, an already existing message is used 
 		/// (handy for localization), otherwise the field-specific messages have to be defined.
 		/// </param>

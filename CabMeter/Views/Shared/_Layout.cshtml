@@ -1,16 +1,36 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>@ViewBag.Title</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
-</head>
-<body>
-    @RenderBody()
+﻿@using CabMeter
+@{
+    Bundles.Reference("content");
+    Bundles.Reference("scripts/jquery-2.0.2.js");
+    Bundles.Reference("scripts/jquery-ui-1.10.3.js");
+    Bundles.Reference("scripts/bootstrap.js");
+    Bundles.Reference("scripts/bootstrap-datepicker.js");
+    Bundles.Reference("scripts/moment.js");
+    Bundles.Reference("scripts/handlebars.js");
+    Bundles.Reference("scripts/ember.js");
+    Bundles.Reference("scripts/ember-emu.js");
+    Bundles.Reference("scripts/app/application/application.js.coffee");
+    Bundles.Reference("scripts/app/models");
+    //Bundles.Reference("scripts/app/routes");
+    //Bundles.Reference("scripts/app/views");
+    Bundles.Reference("scripts/app/helpers");
+}
+<!DOCTYPE html>
+<html>    
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Cab Meter</title>
+        @Bundles.RenderStylesheets()         
+    </head>
 
-    @Scripts.Render("~/bundles/jquery")
-    @RenderSection("scripts", required: false)
-</body>
+    <body>
+        @Handlebars.RenderTemplates("~/scripts/app/templates")
+        @RenderBody()   
+        <script type="text/javascript">
+            window.ENV = window.ENV || {};
+            window.ENV["EXPERIMENTAL_CONTROL_HELPER"] = true;
+        </script>  
+        @Bundles.RenderScripts()         
+    </body>
 </html>

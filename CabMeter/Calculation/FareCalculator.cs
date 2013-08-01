@@ -13,6 +13,8 @@ namespace CabMeter.Calculation
 
         public decimal CalculateFare(Trip trip)
         {
+            trip.TotalFare = 0;
+
             foreach (var rule in ruleFactory.GetRules())
             {
                 trip.TotalFare += rule.Calculate(trip);
